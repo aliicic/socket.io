@@ -1,14 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="node_modules/socket.io/client-dist/socket.io.js"></script>
-    <script src="client.js"></script>
     <title>Document</title>
 </head>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .chat-box {
+        border: 1px solid green;
+        min-height: 400px;
+        width: 400px;
+        padding: 10px;
+    }
+
+    .controler {
+        width: 400px;
+        margin-top: 10px;
+    }
+
+    .controler input[type='text'] {
+        width: 300px;
+    }
+
+    .controler input[type='button'] {
+        width: 88px;
+    }
+    .messages{
+        border: 1px solid red;
+        width: 100%;
+        text-align: center;
+        /* padding: 10px; */
+    }
+</style>
+
 <body>
-    
+
+    <div class="chat-box" id="chat-box">
+
+    </div>
+    <div class="controler" >
+        <input type="text" id="chat-content">
+        <input type="button" value="send" id="send-btn">
+    </div>
+
 </body>
+<script src="client.js"></script>
 </html>
